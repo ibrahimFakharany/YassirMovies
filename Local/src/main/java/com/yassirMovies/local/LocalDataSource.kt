@@ -37,6 +37,7 @@ class LocalDataSource @Inject constructor(
     override suspend fun clearAll() {
         withContext(Dispatchers.IO) {
             moviesDao.clearAll()
+            keysDao.clearAll()
         }
     }
 
